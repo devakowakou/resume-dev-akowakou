@@ -1,13 +1,12 @@
 
 import type { Project, Experience, Education, Certificate } from './types';
-import { placeholderImages } from './placeholder-images.json';
 
 export const author = {
   name: 'Amour Akowakou',
   title: 'Fullstack Developer',
-  email: 'your.email@example.com',
+  email: 'akowakou.dev@gmail.com',
   github: 'https://github.com/devakowakou',
-  linkedin: 'https://linkedin.com/in/your-username',
+  linkedin: 'https://linkedin.com/in/amour-akowakou-b3388127a',
   cv: '/path-to-your-cv.pdf',
 };
 
@@ -19,7 +18,6 @@ export const about = {
     'Programming Languages': [
       'JavaScript',
       'TypeScript',
-
       'Python',
       'Java',
       'PHP',
@@ -97,57 +95,66 @@ export const about = {
   },
 };
 
-const findImage = (id: string) => {
-  const image = placeholderImages.find(img => img.id === id);
-  if (!image) {
-    return { imageUrl: 'https://picsum.photos/seed/default/600/400', imageHint: 'placeholder' };
-  }
-  return { imageUrl: image.imageUrl, imageHint: image.imageHint };
-}
-
 export const projects: Project[] = [
   {
-    id: 'crypto-screener',
-    title: 'Crypto Screener App',
-    description: 'A real-time cryptocurrency screening application to monitor prices, market caps, and trends. Built with React and a public crypto API.',
-    tags: ['React', 'API', 'Charts.js'],
-    ...findImage('crypto-screener'),
-    demoUrl: 'https://example.com/demo1',
-    repoUrl: 'https://github.com/your-username/crypto-screener',
+    id: 'numpharm',
+    title: 'Website Pharmacie(Odoo)',
+    description: 'NumPharm is an online pharmacy that operates primarily in Alberta,offering fast, free same-day prescription delivery. They provide servicessuch as prescription uploads, prescription transfers,and medication packaging for convenience. nuPharma aims to simplify the pharmacy experience by offering virtual consultations and easy access through an app.',
+    tags: ['React','Odoo'],
+    imageUrl: '/images/numpharm.png',
+    imageHint: 'online pharmacy website',
+    repoUrl: 'https://github.com/devakowakou/numpharm',
+    demoUrl: 'https://numpharm.org/',
   },
   {
-    id: 'react-portfolio',
-    title: 'React Portfolio Website',
-    description: 'A dynamic, animated portfolio website to showcase my projects and skills, much like the one you are viewing now. Fully responsive with a focus on UX.',
-    tags: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-    ...findImage('react-portfolio'),
-    demoUrl: 'https://example.com/demo2',
-    repoUrl: 'https://github.com/your-username/react-portfolio',
+    id: 'philjohn-tech',
+    title: 'Website PHILJOHN TECH (Odoo)',
+    description: 'Philjohn Technologies is an innovative company based in Douala, Cameroon, specializing in providing a wide range of IT solutions and services. Their offerings cover areas like IT consulting, enterprise applications development, infrastructure maintenance,cybersecurity, and digital transformation managemen.',
+    tags: ['Next.js', 'Framer Motion', 'Tailwind CSS','Odoo'],
+    imageUrl: '/images/philjohn-tech.png',
+    imageHint: 'tech company website',
+    repoUrl: 'https://github.com/devakowakou/philjohn-tech',
+    demoUrl: 'https://www.philjohntech.com/',
   },
   {
-    id: 'excellentia',
-    title: 'Excellentia (SaaS)',
-    description: 'A multi-tenant SaaS platform for educational institutions to manage students, courses, and grading. Includes role-based access control.',
-    tags: ['Django', 'React', 'PostgreSQL', 'SaaS'],
-    ...findImage('excellentia'),
-    demoUrl: 'https://example.com/demo3',
+    id: 'dema-services',
+    title: 'Website Dema-Service (Odoo)',
+    description: 'Dema-Services is a luxury event planning company specializing in weddings, private celebrations, and brand experiences. Founded by Precious Thamaga-Mazibuko, a prominent wedding planner and event designer, the company has been creating unforgettable events since 2011.',
+    tags: ['Django', 'React', 'PostgreSQL', 'SaaS','Odoo'],
+    imageUrl: '/images/dema-services.png',
+    imageHint: 'event planning website',
+    repoUrl: 'https://github.com/devakowakou/dema-services',
+    demoUrl: 'https://www.demaservices.cm',
   },
   {
-    id: 'right-survey',
-    title: 'RightSurvey',
-    description: 'A survey creation and management tool allowing users to build complex forms, collect responses, and analyze data with interactive charts.',
-    tags: ['Laravel', 'Vue.js', 'MySQL'],
-    ...findImage('right-survey'),
-    repoUrl: 'https://github.com/your-username/right-survey',
+    id: 'sublime-votre',
+    title: ' Website Sublime Votre (Odoo)',
+    description: 'Sublime Votre is a beauty salon offering a wide range of services such as haircuts, pedicures, manicures, facials, eyelash extensions, makeup, body scrubs, and lipocavitation treatments. The salon focuses on providing a personalized and luxurious experience with high-quality products and innovative techniques.',
+    tags: ['Laravel', 'Vue.js', 'MySQL','Odoo'],
+    imageUrl: '/images/sublime-votre.png',
+    imageHint: 'beauty salon website',
+    repoUrl: 'https://github.com/devakowakou/sublime-votre',
+    demoUrl: 'https://www.sublimevotre.ca',
   },
   {
-    id: 'numpharm-org',
-    title: 'Numpharm.org',
-    description: 'A community platform for pharmacists to share knowledge, discuss case studies, and access professional resources. Features forums and a resource library.',
-    tags: ['Node.js', 'Express', 'MongoDB', 'React'],
-    ...findImage('numpharm-org'),
-    demoUrl: 'https://example.com/demo5',
-    repoUrl: 'https://github.com/your-username/numpharm',
+    id: 'csi',
+    title: 'Website CSI ',
+    description: 'CSI is a website Developed for me of a my client. ',
+    tags: ['Node.js', 'Express', 'MongoDB', 'React','Odoo'],
+    imageUrl: '/images/csi.png',
+    imageHint: 'client project website',
+    repoUrl: 'https://github.com/devakowakou/csi',
+    demoUrl: 'https://www.csi-moulins.fr',
+  },
+  {
+    id: 'afrykanna',
+    title: 'Website Afrykanna ',
+    description: 'Afrykanna is a website Developed for me of a my client. ',
+    tags: ['Node.js', 'Express', 'MongoDB', 'React','Odoo'],
+    imageUrl: '/images/afrykanna.png',
+    imageHint: 'client project website',
+    repoUrl: 'https://github.com/devakowakou/afrykanna',
+    demoUrl: 'https://afrykanna.com',
   },
 ];
 
