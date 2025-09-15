@@ -14,20 +14,37 @@ export const about = {
   intro:
     "Passion Fuels Purpose! Hi, I'm Amour Akowakou, a fullstack developer with a deep passion for building beautiful, functional, and user-centered digital experiences. I thrive on transforming complex problems into elegant solutions.",
   bio: "As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. My expertise spans across various technologies including Django, Node.js, Laravel, and React/Next.js. I am committed to continuous learning and applying my skills to create impactful software.",
-  skills: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'Django',
-    'Laravel',
-    'PostgreSQL',
-    'MongoDB',
-    'Tailwind CSS',
-    'Framer Motion',
-    'Docker',
-    'AWS',
-  ],
+  skills: {
+    'Languages & Frameworks': [
+      'JavaScript',
+      'TypeScript',
+      'Python',
+      'PHP',
+      'Go',
+      'React',
+      'Next.js',
+      'Node.js',
+      'Django',
+      'Laravel',
+    ],
+    'Databases & Tools': [
+      'PostgreSQL',
+      'MongoDB',
+      'MySQL',
+      'Redis',
+      'Tailwind CSS',
+      'Framer Motion',
+    ],
+    'DevOps & Platforms': [
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'Google Cloud',
+      'Terraform',
+      'Jenkins',
+      'Git',
+    ],
+  },
 };
 
 const findImage = (id: string) => {
