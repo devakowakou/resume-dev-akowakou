@@ -1,3 +1,4 @@
+
 import type { Project, Experience, Article, Education } from './types';
 import { placeholderImages } from './placeholder-images.json';
 
@@ -155,28 +156,44 @@ export const experiences: Experience[] = [
     company: 'RightCom',
     role: 'Back End Developer',
     date: 'Oct 2024 - Jun 2025',
-    description: 'Participated in the development of RightSurvey software. Developed APIs with Python, Flask, and Falcon. Developed APIs with NodeJS.',
+    description: [
+      'Contributed to the development of RightSurvey, a large-scale enterprise survey platform.',
+      'Engineered and optimized RESTful APIs using Python with Flask and Falcon frameworks.',
+      'Developed microservices and APIs with Node.js to support various application features.'
+    ],
   },
   {
     id: 'exp2',
     company: 'PHILJOHN TECH',
     role: 'Freelance Odoo Consultant',
     date: 'Jan 2024 - Present',
-    description: 'Integration, customization, and maintenance of Odoo for international clients. Development of Python modules to automate business processes. User training and ongoing technical support.',
+    description: [
+      'Managed end-to-end Odoo ERP integration, customization, and maintenance for a diverse portfolio of international clients.',
+      'Developed custom Python modules to automate key business processes, improving operational efficiency.',
+      'Provided comprehensive user training and continuous technical support to ensure smooth adoption.'
+    ],
   },
   {
     id: 'exp3',
     company: 'TEC-SARL',
     role: 'PHP-Symfony Developer',
     date: 'Feb 2023 - Jun 2023',
-    description: 'Set up a LAN network. Configured a Cisco access point. Implemented client-server software (VoIP). Developed the company website for TEC-SARL.',
+    description: [
+      'Designed and deployed a company-wide LAN network, including Cisco access point configuration.',
+      'Implemented a client-server VoIP solution to modernize internal communications.',
+      'Led the development of the corporate website using the PHP Symfony framework.'
+    ],
   },
    {
     id: 'exp4',
     company: 'PHILJOHN TECH',
     role: 'Web Developer',
     date: 'Jan 2023 - Dec 2023',
-    description: 'Development and maintenance of the numpharm.org website. Design and deployment of RESTful APIs in Python (Django REST Framework). Writing Python scripts for business data extraction and analysis.',
+    description: [
+      'Oversaw the full development lifecycle and ongoing maintenance of the numpharm.org web platform.',
+      'Designed and deployed scalable RESTful APIs using Python and the Django REST Framework.',
+      'Created custom Python scripts for complex business data extraction and analysis, enabling data-driven decisions.'
+    ],
   },
 ];
 
