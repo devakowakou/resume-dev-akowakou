@@ -152,24 +152,31 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: 'exp1',
-    company: 'Tech Solutions Inc.',
-    role: 'Senior Fullstack Developer',
-    date: 'Jan 2021 - Present',
-    description: 'Led the development of a major e-commerce platform, improving performance by 30%. Mentored junior developers and introduced new technologies to the stack.',
+    company: 'RightCom',
+    role: 'Back End Developer',
+    date: 'Oct 2024 - Jun 2025',
+    description: 'Participated in the development of RightSurvey software. Developed APIs with Python, Flask, and Falcon. Developed APIs with NodeJS.',
   },
   {
     id: 'exp2',
-    company: 'Innovate Co.',
-    role: 'Mid-level Software Engineer',
-    date: 'Jun 2018 - Dec 2020',
-    description: 'Developed and maintained features for a client-facing SaaS product using Django and React. Collaborated in an agile team to deliver high-quality software.',
+    company: 'PHILJOHN TECH',
+    role: 'Freelance Odoo Consultant',
+    date: 'Jan 2024 - Present',
+    description: 'Integration, customization, and maintenance of Odoo for international clients. Development of Python modules to automate business processes. User training and ongoing technical support.',
   },
   {
     id: 'exp3',
-    company: 'Web Wizards Agency',
-    role: 'Junior Web Developer',
-    date: 'May 2017 - May 2018',
-    description: 'Built and styled responsive websites for various clients using HTML, CSS, JavaScript, and PHP frameworks like Laravel.',
+    company: 'TEC-SARL',
+    role: 'PHP-Symfony Developer',
+    date: 'Feb 2023 - Jun 2023',
+    description: 'Set up a LAN network. Configured a Cisco access point. Implemented client-server software (VoIP). Developed the company website for TEC-SARL.',
+  },
+   {
+    id: 'exp4',
+    company: 'PHILJOHN TECH',
+    role: 'Web Developer',
+    date: 'Jan 2023 - Dec 2023',
+    description: 'Development and maintenance of the numpharm.org website. Design and deployment of RESTful APIs in Python (Django REST Framework). Writing Python scripts for business data extraction and analysis.',
   },
 ];
 
