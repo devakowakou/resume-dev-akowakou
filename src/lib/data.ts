@@ -97,6 +97,24 @@ export const about = {
 
 export const projects: Project[] = [
   {
+    id: 'niyas-store',
+    title: 'Niyas Store',
+    description: 'An elegant and modern e-commerce platform with a clean user interface and a seamless shopping experience.',
+    tags: ['Next.js', 'E-commerce', 'Tailwind CSS', 'Vercel'],
+    imageUrl: '/images/niyas-store.png',
+    imageHint: 'e-commerce website',
+    demoUrl: 'https://niyas-store.vercel.app',
+  },
+  {
+    id: 'claire-net',
+    title: 'Claire Net',
+    description: 'A professional website for a cleaning service company, designed to attract clients and showcase their services.',
+    tags: ['Next.js', 'Landing Page', 'Services', 'Vercel'],
+    imageUrl: '/images/claire-net.png',
+    imageHint: 'cleaning service website',
+    demoUrl: 'https://claire-net.vercel.app',
+  },
+  {
     id: 'numpharm',
     title: 'Website Pharmacie(Odoo)',
     description: 'NumPharm is an online pharmacy that operates primarily in Alberta,offering fast, free same-day prescription delivery. They provide servicessuch as prescription uploads, prescription transfers,and medication packaging for convenience. nuPharma aims to simplify the pharmacy experience by offering virtual consultations and easy access through an app.',
@@ -213,7 +231,7 @@ export const education: Education[] = [
     date: '2022 – 2025',
     location: 'Cotonou',
     country: 'Bénin',
-    website: 'https://esgis.bj',
+    website: 'esgis.bj',
   },
 ];
 
