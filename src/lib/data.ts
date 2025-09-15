@@ -7,7 +7,7 @@ export const author = {
   email: 'akowakou.dev@gmail.com',
   github: 'https://github.com/devakowakou',
   linkedin: 'https://linkedin.com/in/amour-akowakou-b3388127a',
-  cv: '/path-to-your-cv.pdf',
+  cv: '/pdf/AMOUR_AKOWAKOU_CV.pdf',
 };
 
 export const about = {
