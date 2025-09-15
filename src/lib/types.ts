@@ -17,6 +17,16 @@ export type Experience = {
   description: string;
 };
 
+export type Education = {
+  id: string;
+  school: string;
+  degree: string;
+  date: string;
+  location: string;
+  country: string;
+  website?: string;
+};
+
 export type Article = {
   id: string;
   title: string;

@@ -1,4 +1,4 @@
-import type { Project, Experience, Article } from './types';
+import type { Project, Experience, Article, Education } from './types';
 import { placeholderImages } from './placeholder-images.json';
 
 export const author = {
@@ -170,6 +170,18 @@ export const experiences: Experience[] = [
     role: 'Junior Web Developer',
     date: 'May 2017 - May 2018',
     description: 'Built and styled responsive websites for various clients using HTML, CSS, JavaScript, and PHP frameworks like Laravel.',
+  },
+];
+
+export const education: Education[] = [
+  {
+    id: 'edu1',
+    school: 'ESGIS',
+    degree: 'Licence en Architecture des Logiciels',
+    date: '2022 – 2025',
+    location: 'Cotonou',
+    country: 'Bénin',
+    website: 'https://esgis.bj',
   },
 ];
 
