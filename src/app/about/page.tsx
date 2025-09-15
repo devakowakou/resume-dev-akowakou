@@ -31,13 +31,26 @@ const skillIcons: Record<string, string> = {
   PHP: '/icons/php.svg',
   'C#': '/icons/csharp.svg',
   Go: '/icons/go.svg',
+  Java: '/icons/java.svg',
+  Ruby: '/icons/ruby.svg',
+  Swift: '/icons/swift.svg',
+  Kotlin: '/icons/kotlin.svg',
+  Rust: '/icons/rust.svg',
+  'C++': '/icons/cplusplus.svg',
+  Scala: '/icons/scala.svg',
+  Elixir: '/icons/elixir.svg',
+  Dart: '/icons/dart.svg',
   React: '/icons/react.svg',
   'Next.js': '/icons/nextjs.svg',
   'Node.js': '/icons/nodejs.svg',
   Express: '/icons/express.svg',
   Django: '/icons/django.svg',
+  'Ruby on Rails': '/icons/rails.svg',
   Laravel: '/icons/laravel.svg',
   'ASP.NET': '/icons/dotnet.svg',
+  Vue: '/icons/vue.svg',
+  Angular: '/icons/angular.svg',
+  Svelte: '/icons/svelte.svg',
   PostgreSQL: '/icons/postgresql.svg',
   MongoDB: '/icons/mongodb.svg',
   MySQL: '/icons/mysql.svg',
@@ -51,6 +64,11 @@ const skillIcons: Record<string, string> = {
   Git: '/icons/git.svg',
   Terraform: '/icons/terraform.svg',
   Jenkins: '/icons/jenkins.svg',
+  Ansible: '/icons/ansible.svg',
+  GraphQL: '/icons/graphql.svg',
+  Firebase: '/icons/firebase.svg',
+  Webpack: '/icons/webpack.svg',
+  Vite: '/icons/vite.svg',
 };
 
 export default function AboutPage() {
@@ -96,24 +114,17 @@ export default function AboutPage() {
           performant web applications.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-12 space-y-12">
           {Object.entries(about.skills).map(
             ([category, skills], categoryIndex) => (
-              <ScrollReveal
-                key={category}
-                delay={0.5 + categoryIndex * 0.1}
-                className="h-full"
-              >
-                <Card className="h-full bg-card/50 hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <CardTitle>{category}</CardTitle>
-                    <CardDescription>
-                      Tools and technologies for {category.toLowerCase()}.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
+              <div key={category}>
+                <ScrollReveal delay={0.5 + categoryIndex * 0.1}>
+                  <h3 className="text-2xl font-bold text-center text-foreground mb-8">{category}</h3>
+                </ScrollReveal>
+                <Card className="bg-card/50">
+                  <CardContent className="p-6">
                     <TooltipProvider>
-                      <div className="flex flex-wrap gap-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
                         {skills.map((skill, skillIndex) => (
                           <Tooltip key={skill}>
                             <TooltipTrigger>
@@ -124,20 +135,21 @@ export default function AboutPage() {
                                   skillIndex * 0.05
                                 }
                               >
-                                <div className="group relative flex h-14 w-14 items-center justify-center rounded-lg bg-background/50 p-2 transition-all duration-300 hover:scale-110 hover:bg-primary/10">
+                                <div className="group relative flex flex-col items-center justify-center gap-2 rounded-lg bg-background/50 p-4 transition-all duration-300 hover:scale-110 hover:bg-primary/10">
                                   {skillIcons[skill] ? (
                                     <Image
                                       src={skillIcons[skill]}
                                       alt={`${skill} icon`}
-                                      width={32}
-                                      height={32}
-                                      className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-105"
+                                      width={40}
+                                      height={40}
+                                      className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105"
                                     />
                                   ) : (
-                                    <span className="text-xs text-center font-bold">
-                                      {skill}
-                                    </span>
+                                    <div className="h-10 w-10 flex items-center justify-center">
+                                      <span className="text-3xl font-bold">?</span>
+                                    </div>
                                   )}
+                                  <span className="text-xs text-center font-semibold mt-1">{skill}</span>
                                 </div>
                               </ScrollReveal>
                             </TooltipTrigger>
@@ -150,7 +162,7 @@ export default function AboutPage() {
                     </TooltipProvider>
                   </CardContent>
                 </Card>
-              </ScrollReveal>
+              </div>
             )
           )}
         </div>
