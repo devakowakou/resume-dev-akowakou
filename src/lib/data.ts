@@ -1,5 +1,5 @@
 
-import type { Project, Experience, Article, Education } from './types';
+import type { Project, Experience, Article, Education, Certificate } from './types';
 import { placeholderImages } from './placeholder-images.json';
 
 export const author = {
@@ -19,6 +19,7 @@ export const about = {
     'Programming Languages': [
       'JavaScript',
       'TypeScript',
+
       'Python',
       'Java',
       'PHP',
@@ -208,6 +209,41 @@ export const education: Education[] = [
     website: 'https://esgis.bj',
   },
 ];
+
+export const certificates: Certificate[] = [
+    {
+      id: 'cert1',
+      title: 'Data Analyst in Python',
+      issuer: 'FreeCodeCamp',
+      date: '2023',
+      url: '#', // Placeholder URL
+      skills: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
+    },
+    {
+      id: 'cert2',
+      title: 'Back End Development and APIs',
+      issuer: 'FreeCodeCamp',
+      date: '2023',
+      url: '#',
+      skills: ['Node.js', 'Express', 'APIs', 'MongoDB'],
+    },
+    {
+      id: 'cert3',
+      title: 'Responsive Web Design',
+      issuer: 'FreeCodeCamp',
+      date: '2022',
+      url: '#',
+      skills: ['HTML', 'CSS', 'Flexbox', 'CSS Grid'],
+    },
+    {
+      id: 'cert4',
+      title: 'Relational Databases',
+      issuer: 'FreeCodeCamp',
+      date: '2023',
+      url: '#',
+      skills: ['Bash', 'PostgreSQL', 'Git'],
+    },
+  ];
 
 export const articles: Article[] = [
   {

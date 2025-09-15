@@ -28,6 +28,15 @@ export type Education = {
   website?: string;
 };
 
+export type Certificate = {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  url: string;
+  skills: string[];
+};
+
 export type Article = {
   id: string;
   title: string;

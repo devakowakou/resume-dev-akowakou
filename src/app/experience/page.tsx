@@ -1,6 +1,8 @@
+
 import { Metadata } from 'next';
 import { ExperienceTimeline } from '@/components/experience-timeline';
 import { EducationTimeline } from '@/components/education-timeline';
+import { CertificatesTimeline } from '@/components/certificates-timeline';
 import { ScrollReveal } from '@/components/scroll-reveal';
 
 export const metadata: Metadata = {
@@ -36,6 +38,15 @@ export default function ExperiencePage() {
           </h2>
         </ScrollReveal>
         <EducationTimeline />
+      </div>
+
+      <div className="mt-20">
+        <ScrollReveal>
+          <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground mb-12 text-center">
+            Certifications
+          </h2>
+        </ScrollReveal>
+        <CertificatesTimeline />
       </div>
     </div>
   );
