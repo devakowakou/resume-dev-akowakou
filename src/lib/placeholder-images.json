@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "crypto-screener",
+      "description": "A dashboard showing cryptocurrency data with charts and graphs.",
+      "imageUrl": "https://picsum.photos/seed/crypto/600/400",
+      "imageHint": "crypto dashboard"
+    },
+    {
+      "id": "react-portfolio",
+      "description": "A modern and clean portfolio website layout.",
+      "imageUrl": "https://picsum.photos/seed/portfolio/600/400",
+      "imageHint": "website layout"
+    },
+    {
+      "id": "excellentia",
+      "description": "An online learning platform interface.",
+      "imageUrl": "https://picsum.photos/seed/saas/600/400",
+      "imageHint": "learning platform"
+    },
+    {
+      "id": "right-survey",
+      "description": "An online survey form with various question types.",
+      "imageUrl": "https://picsum.photos/seed/survey/600/400",
+      "imageHint": "online form"
+    },
+    {
+      "id": "numpharm-org",
+      "description": "A professional community forum for pharmacists.",
+      "imageUrl": "https://picsum.photos/seed/community/600/400",
+      "imageHint": "community forum"
+    },
+    {
+      "id": "about-me",
+      "description": "A professional portrait of a developer.",
+      "imageUrl": "https://picsum.photos/seed/dev-portrait/500/500",
+      "imageHint": "developer portrait"
+    }
+  ]
 }
