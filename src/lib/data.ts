@@ -5,7 +5,7 @@ export const author = {
   name: 'Amour Akowakou',
   title: 'Fullstack Developer',
   email: 'your.email@example.com',
-  github: 'https://github.com/your-username',
+  github: 'https://github.com/devakowakou',
   linkedin: 'https://linkedin.com/in/your-username',
   cv: '/path-to-your-cv.pdf',
 };
