@@ -1,6 +1,8 @@
 'use server';
 
 import { z } from 'zod';
+import { Resend } from 'resend';
+import { ContactEmailTemplate } from '@/components/emails/contact-email-template';
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -35,16 +37,44 @@ export async function submitContactForm(
       success: false,
     };
   }
-  
-  // Here you would integrate with an email sending service like EmailJS, Resend, or Nodemailer.
-  // For this example, we'll just simulate a successful submission.
-  console.log('Form data submitted:', validatedFields.data);
 
-  // Simulate network delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  
-  return {
-    message: 'Thank you! Your message has been sent successfully.',
-    success: true,
-  };
+  const { name, email, message } = validatedFields.data;
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const toEmail = process.env.CONTACT_EMAIL_TO;
+
+  if (!toEmail) {
+    console.error('CONTACT_EMAIL_TO environment variable is not set.');
+    return {
+      message: 'Server configuration error. Could not send email.',
+      success: false,
+    };
+  }
+
+  try {
+    const { data, error } = await resend.emails.send({
+      from: 'Portfolio Contact Form <onboarding@resend.dev>',
+      to: [toEmail],
+      subject: `New message from ${name} via your portfolio`,
+      react: ContactEmailTemplate({ name, email, message })
+    });
+
+    if (error) {
+      console.error('Resend error:', error);
+      return { 
+        message: 'There was an error sending your message.', 
+        success: false 
+      };
+    }
+
+    return {
+      message: 'Thank you! Your message has been sent successfully.',
+      success: true,
+    };
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    return {
+      message: 'Something went wrong. Please try again.',
+      success: false,
+    };
+  }
 }
