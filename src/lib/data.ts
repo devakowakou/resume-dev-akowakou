@@ -1,14 +1,13 @@
 
 import type { Project, Experience, Education, Certificate } from './types';
-import { placeholderImages } from './placeholder-images.json';
 
 export const author = {
   name: 'Amour Akowakou',
   title: 'Fullstack Developer',
-  email: 'your.email@example.com',
+  email: 'akowakou.dev@gmail.com',
   github: 'https://github.com/devakowakou',
-  linkedin: 'https://linkedin.com/in/your-username',
-  cv: '/path-to-your-cv.pdf',
+  linkedin: 'https://linkedin.com/in/amour-akowakou-b3388127a',
+  cv: '/pdf/AMOUR_AKOWAKOU_CV.pdf',
 };
 
 export const about = {
@@ -19,7 +18,6 @@ export const about = {
     'Programming Languages': [
       'JavaScript',
       'TypeScript',
-
       'Python',
       'Java',
       'PHP',
@@ -97,57 +95,116 @@ export const about = {
   },
 };
 
-const findImage = (id: string) => {
-  const image = placeholderImages.find(img => img.id === id);
-  if (!image) {
-    return { imageUrl: 'https://picsum.photos/seed/default/600/400', imageHint: 'placeholder' };
-  }
-  return { imageUrl: image.imageUrl, imageHint: image.imageHint };
-}
-
 export const projects: Project[] = [
   {
-    id: 'crypto-screener',
-    title: 'Crypto Screener App',
-    description: 'A real-time cryptocurrency screening application to monitor prices, market caps, and trends. Built with React and a public crypto API.',
-    tags: ['React', 'API', 'Charts.js'],
-    ...findImage('crypto-screener'),
-    demoUrl: 'https://example.com/demo1',
-    repoUrl: 'https://github.com/your-username/crypto-screener',
+    id: 'niyas-store',
+    title: 'Niyas Store',
+    description: 'An elegant and modern e-commerce platform with a clean user interface and a seamless shopping experience.',
+    tags: ['Next.js', 'E-commerce', 'Tailwind CSS', 'Vercel'],
+    imageUrl: '/images/niyas-store.png',
+    imageHint: 'e-commerce website',
+    repoUrl: 'https://github.com/djiawou/niyas-store',
+    demoUrl: 'https://niyas-store.vercel.app',
   },
   {
-    id: 'react-portfolio',
-    title: 'React Portfolio Website',
-    description: 'A dynamic, animated portfolio website to showcase my projects and skills, much like the one you are viewing now. Fully responsive with a focus on UX.',
-    tags: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-    ...findImage('react-portfolio'),
-    demoUrl: 'https://example.com/demo2',
-    repoUrl: 'https://github.com/your-username/react-portfolio',
+    id: 'claire-net',
+    title: 'Claire Net',
+    description: 'A professional website for a cleaning service company, designed to attract clients and showcase their services.',
+    tags: ['Next.js', 'Landing Page', 'Services', 'Vercel'],
+    imageUrl: '/images/claire-net.png',
+    imageHint: 'cleaning service website',
+    repoUrl: 'https://github.com/djiawou/claire-net',
+    demoUrl: 'https://claire-net.vercel.app',
+  },
+   {
+    id: 'gocart',
+    title: 'GoCart',
+    description: 'A modern and feature-rich e-commerce application for a seamless online shopping experience.',
+    tags: ['Next.js', 'E-commerce', 'Tailwind CSS'],
+    imageUrl: '/images/gocart.png',
+    imageHint: 'e-commerce app',
+    repoUrl: 'https://github.com/djiawou/gocart',
+    demoUrl: 'https://gocart-lac.vercel.app/',
   },
   {
-    id: 'excellentia',
-    title: 'Excellentia (SaaS)',
-    description: 'A multi-tenant SaaS platform for educational institutions to manage students, courses, and grading. Includes role-based access control.',
-    tags: ['Django', 'React', 'PostgreSQL', 'SaaS'],
-    ...findImage('excellentia'),
-    demoUrl: 'https://example.com/demo3',
+    id: 'shofy',
+    title: 'Shofy',
+    description: 'A complete MERN stack e-commerce solution with a focus on performance and user experience.',
+    tags: ['MERN', 'React', 'MongoDB', 'Node.js', 'Express'],
+    imageUrl: '/images/shofy.png',
+    imageHint: 'MERN e-commerce',
+    repoUrl: 'https://github.com/djiawou/shofy',
+    demoUrl: 'https://shofy-omega.vercel.app/',
   },
   {
-    id: 'right-survey',
-    title: 'RightSurvey',
-    description: 'A survey creation and management tool allowing users to build complex forms, collect responses, and analyze data with interactive charts.',
-    tags: ['Laravel', 'Vue.js', 'MySQL'],
-    ...findImage('right-survey'),
-    repoUrl: 'https://github.com/your-username/right-survey',
+    id: 'tutor-match',
+    title: 'Tutor-Student Matchmaking System',
+    description: 'A MERN stack application designed to connect students with qualified tutors based on their learning needs.',
+    tags: ['MERN', 'React', 'MongoDB', 'Node.js', 'Express'],
+    imageUrl: '/images/studena.png',
+    imageHint: 'online tutoring platform',
+    repoUrl: 'devakowakou/studena-matchmaking',
+    demoUrl: 'https://frontend-two-sable-30.vercel.app/',
   },
   {
-    id: 'numpharm-org',
-    title: 'Numpharm.org',
-    description: 'A community platform for pharmacists to share knowledge, discuss case studies, and access professional resources. Features forums and a resource library.',
-    tags: ['Node.js', 'Express', 'MongoDB', 'React'],
-    ...findImage('numpharm-org'),
-    demoUrl: 'https://example.com/demo5',
-    repoUrl: 'https://github.com/your-username/numpharm',
+    id: 'numpharm',
+    title: 'Website Pharmacie(Odoo)',
+    description: 'NumPharm is an online pharmacy that operates primarily in Alberta,offering fast, free same-day prescription delivery. They provide servicessuch as prescription uploads, prescription transfers,and medication packaging for convenience. nuPharma aims to simplify the pharmacy experience by offering virtual consultations and easy access through an app.',
+    tags: ['React','Odoo'],
+    imageUrl: '/images/numpharm.png',
+    imageHint: 'online pharmacy website',
+    repoUrl: 'https://github.com/devakowakou/numpharm',
+    demoUrl: 'https://numpharm.org/',
+  },
+  {
+    id: 'philjohn-tech',
+    title: 'Website PHILJOHN TECH (Odoo)',
+    description: 'Philjohn Technologies is an innovative company based in Douala, Cameroon, specializing in providing a wide range of IT solutions and services. Their offerings cover areas like IT consulting, enterprise applications development, infrastructure maintenance,cybersecurity, and digital transformation managemen.',
+    tags: ['Next.js', 'Framer Motion', 'Tailwind CSS','Odoo'],
+    imageUrl: '/images/philjohn-tech.png',
+    imageHint: 'tech company website',
+    repoUrl: 'https://github.com/devakowakou/philjohn-tech',
+    demoUrl: 'https://www.philjohntech.com/',
+  },
+  {
+    id: 'dema-services',
+    title: 'Website Dema-Service (Odoo)',
+    description: 'Dema-Services is a luxury event planning company specializing in weddings, private celebrations, and brand experiences. Founded by Precious Thamaga-Mazibuko, a prominent wedding planner and event designer, the company has been creating unforgettable events since 2011.',
+    tags: ['Django', 'React', 'PostgreSQL', 'SaaS','Odoo'],
+    imageUrl: '/images/dema-services.png',
+    imageHint: 'event planning website',
+    repoUrl: 'https://github.com/devakowakou/dema-services',
+    demoUrl: 'https://www.demaservices.cm',
+  },
+  {
+    id: 'sublime-votre',
+    title: ' Website Sublime Votre (Odoo)',
+    description: 'Sublime Votre is a beauty salon offering a wide range of services such as haircuts, pedicures, manicures, facials, eyelash extensions, makeup, body scrubs, and lipocavitation treatments. The salon focuses on providing a personalized and luxurious experience with high-quality products and innovative techniques.',
+    tags: ['Laravel', 'Vue.js', 'MySQL','Odoo'],
+    imageUrl: '/images/sublime-votre.png',
+    imageHint: 'beauty salon website',
+    repoUrl: 'https://github.com/devakowakou/sublime-votre',
+    demoUrl: 'https://www.sublimevotre.ca',
+  },
+  {
+    id: 'csi',
+    title: 'Website CSI ',
+    description: 'CSI is a website Developed for me of a my client. ',
+    tags: ['Node.js', 'Express', 'MongoDB', 'React','Odoo'],
+    imageUrl: '/images/csi.png',
+    imageHint: 'client project website',
+    repoUrl: 'https://github.com/devakowakou/csi',
+    demoUrl: 'https://www.csi-moulins.fr',
+  },
+  {
+    id: 'afrykanna',
+    title: 'Website Afrykanna ',
+    description: 'Afrykanna is a website Developed for me of a my client. ',
+    tags: ['Node.js', 'Express', 'MongoDB', 'React','Odoo'],
+    imageUrl: '/images/afrykanna.png',
+    imageHint: 'client project website',
+    repoUrl: 'https://github.com/devakowakou/afrykanna',
+    demoUrl: 'https://afrykanna.com',
   },
 ];
 
@@ -206,7 +263,7 @@ export const education: Education[] = [
     date: '2022 – 2025',
     location: 'Cotonou',
     country: 'Bénin',
-    website: 'https://esgis.bj',
+    website: 'esgis.bj',
   },
 ];
 
