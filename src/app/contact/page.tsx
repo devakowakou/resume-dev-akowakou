@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
