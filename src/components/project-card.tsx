@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Eye, Github } from 'lucide-react';
 import type { Project } from '@/lib/types';
 import { cn } from '@/lib/utils';
+import { skillIcons } from '@/lib/skills';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -78,8 +79,17 @@ export function ProjectCard({ project }: { project: Project }) {
           <p className="flex-1 text-sm text-muted-foreground">{project.description}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
-                {tag}
+              <Badge key={tag} variant="secondary" className="flex items-center gap-1.5">
+                {skillIcons[tag] && (
+                   <Image
+                      src={skillIcons[tag]}
+                      alt={`${tag} icon`}
+                      width={14}
+                      height={14}
+                      className="h-3.5 w-3.5"
+                    />
+                )}
+                <span>{tag}</span>
               </Badge>
             ))}
           </div>
