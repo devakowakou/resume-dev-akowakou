@@ -64,8 +64,35 @@ const skillIcons: Record<string, string> = {
   Ansible: '/icons/ansible.svg',
   GraphQL: '/icons/graphql.svg',
   Firebase: '/icons/firebase.svg',
-  Webpack: '/icons/webpack.svg',
   Vite: '/icons/vite.svg',
+  Lua: '/icons/lua.svg',
+  Perl: '/icons/perl.svg',
+  MATLAB: '/icons/matlab.svg',
+  Groovy: '/icons/groovy.svg',
+  R: '/icons/r.svg',
+  Flask: '/icons/flask.svg',
+  FastAPI: '/icons/fastapi.svg',
+  Symfony: '/icons/symfony.svg',
+  Spring: '/icons/spring.svg',
+  jQuery: '/icons/jquery.svg',
+  SQLite: '/icons/sqlite.svg',
+  Oracle: '/icons/oracle.svg',
+  MariaDB: '/icons/mariadb.svg',
+  'VS Code': '/icons/vscode.svg',
+  'IntelliJ IDEA': '/icons/intellij-idea.svg',
+  PyCharm: '/icons/pycharm.svg',
+  WebStorm: '/icons/webstorm.svg',
+  Vim: '/icons/vim.svg',
+  Webflow: '/icons/webflow.svg',
+  Bubble: '/icons/bubble.svg',
+  Zapier: '/icons/zapier.svg',
+  Airtable: '/icons/airtable.svg',
+  Notion: '/icons/notion.svg',
+  Make: '/icons/make.svg',
+  Figma: '/icons/figma.svg',
+  Adalo: '/icons/adalo.svg',
+  Glide: '/icons/glide.svg',
+  Softr: '/icons/softr.svg',
 };
 
 export default function AboutPage() {
@@ -122,7 +149,7 @@ export default function AboutPage() {
                   <CardContent className="p-6">
                     <TooltipProvider>
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
-                        {skills.map((skill, skillIndex) => (
+                        {(skills as string[]).map((skill, skillIndex) => (
                           <Tooltip key={skill}>
                             <TooltipTrigger>
                               <ScrollReveal
