@@ -31,7 +31,7 @@ export function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          src="https://cdn.pixabay.com/video/2019/12/20/30522-382901323_large.mp4"
+          src="https://cdn.pixabay.com/video/2022/07/21/123849-734799793_large.mp4"
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
       </div>
