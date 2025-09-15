@@ -24,9 +24,19 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          src="https://cdn.pixabay.com/video/2019/12/20/30522-382901323_large.mp4"
+        />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+      </div>
+      <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div className="text-center">
             <AnimatedText
               el="h1"
               text={heroTitle}
@@ -36,11 +46,11 @@ export function Hero() {
             <AnimatedCharacters
               el="p"
               text={heroSubtext}
-              className="mt-6 text-lg max-w-xl mx-auto lg:mx-0 text-muted-foreground"
+              className="mt-6 text-lg max-w-3xl mx-auto text-muted-foreground"
               stagger={0.01}
             />
             <motion.div
-              className="mt-10 flex items-center justify-center lg:justify-start gap-4"
+              className="mt-10 flex items-center justify-center gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.5 }}
@@ -60,19 +70,6 @@ export function Hero() {
               </Button>
             </motion.div>
           </div>
-          <div className="hidden lg:block">
-            <motion.div
-              className="relative w-full h-full"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-            >
-              <div className="absolute w-64 h-64 bg-primary/20 rounded-full -top-10 -left-10 blur-2xl animate-[pulse_8s_ease-in-out_infinite]"></div>
-              <div className="absolute w-72 h-72 bg-accent/20 rounded-full -bottom-20 -right-10 blur-2xl animate-[pulse_10s_ease-in-out_infinite_2s]"></div>
-              <div className="absolute w-48 h-48 bg-secondary rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-xl"></div>
-            </motion.div>
-          </div>
-        </div>
       </div>
     </section>
   );

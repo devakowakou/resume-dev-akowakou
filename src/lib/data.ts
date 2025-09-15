@@ -103,6 +103,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'E-commerce', 'Tailwind CSS', 'Vercel'],
     imageUrl: '/images/niyas-store.png',
     imageHint: 'e-commerce website',
+    repoUrl: 'https://github.com/djiawou/niyas-store',
     demoUrl: 'https://niyas-store.vercel.app',
   },
   {
@@ -112,6 +113,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'Landing Page', 'Services', 'Vercel'],
     imageUrl: '/images/claire-net.png',
     imageHint: 'cleaning service website',
+    repoUrl: 'https://github.com/djiawou/claire-net',
     demoUrl: 'https://claire-net.vercel.app',
   },
    {
@@ -121,6 +123,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'E-commerce', 'Tailwind CSS'],
     imageUrl: '/images/gocart.png',
     imageHint: 'e-commerce app',
+    repoUrl: 'https://github.com/djiawou/gocart',
     demoUrl: 'https://gocart-lac.vercel.app/',
   },
   {
@@ -130,6 +133,7 @@ export const projects: Project[] = [
     tags: ['MERN', 'React', 'MongoDB', 'Node.js', 'Express'],
     imageUrl: '/images/shofy.png',
     imageHint: 'MERN e-commerce',
+    repoUrl: 'https://github.com/djiawou/shofy',
     demoUrl: 'https://shofy-omega.vercel.app/',
   },
   {
@@ -139,6 +143,7 @@ export const projects: Project[] = [
     tags: ['MERN', 'React', 'MongoDB', 'E-commerce'],
     imageUrl: '/images/e-shop.png',
     imageHint: 'online store',
+    repoUrl: 'https://github.com/devakowakou/numpharm',
     demoUrl: 'https://frontend-two-sable-30.vercel.app/',
   },
   {

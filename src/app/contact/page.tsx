@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 import { ContactForm } from '@/components/contact-form';
 import { ScrollReveal } from '@/components/scroll-reveal';
 import { author } from '@/lib/data';
@@ -36,6 +37,17 @@ export default function ContactPage() {
               <h4 className="font-semibold">Email</h4>
               <a href={`mailto:${author.email}`} className="text-muted-foreground hover:text-primary transition-colors">
                 {author.email}
+              </a>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+               <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+            </div>
+            <div>
+              <h4 className="font-semibold">WhatsApp</h4>
+              <a href={`https://wa.me/22958186569`} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                +229 58 18 65 69
               </a>
             </div>
           </div>
