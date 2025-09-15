@@ -141,9 +141,9 @@ export const projects: Project[] = [
     title: 'Tutor-Student Matchmaking System',
     description: 'A MERN stack application designed to connect students with qualified tutors based on their learning needs.',
     tags: ['MERN', 'React', 'MongoDB', 'Node.js', 'Express'],
-    imageUrl: '/images/e-shop.png',
+    imageUrl: '/images/studena.png',
     imageHint: 'online tutoring platform',
-    repoUrl: 'https://github.com/devakowakou/numpharm',
+    repoUrl: 'devakowakou/studena-matchmaking',
     demoUrl: 'https://frontend-two-sable-30.vercel.app/',
   },
   {

@@ -4,7 +4,7 @@
     {
       "id": "about-me",
       "description": "A professional portrait of a developer.",
-      "imageUrl": "https://picsum.photos/seed/dev-portrait/500/500",
+      "imageUrl": "/images/professional-amour.png",
       "imageHint": "developer portrait"
     }
   ]
