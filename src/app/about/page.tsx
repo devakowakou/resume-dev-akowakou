@@ -6,9 +6,6 @@ import { ScrollReveal } from '@/components/scroll-reveal';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
 import {
   Tooltip,
@@ -28,10 +25,9 @@ const skillIcons: Record<string, string> = {
   JavaScript: '/icons/javascript.svg',
   TypeScript: '/icons/typescript.svg',
   Python: '/icons/python.svg',
-  PHP: '/icons/php.svg',
+  Java: '/icons/java.svg',
   'C#': '/icons/csharp.svg',
   Go: '/icons/go.svg',
-  Java: '/icons/java.svg',
   Ruby: '/icons/ruby.svg',
   Swift: '/icons/swift.svg',
   Kotlin: '/icons/kotlin.svg',
@@ -40,6 +36,7 @@ const skillIcons: Record<string, string> = {
   Scala: '/icons/scala.svg',
   Elixir: '/icons/elixir.svg',
   Dart: '/icons/dart.svg',
+  PHP: '/icons/php.svg',
   React: '/icons/react.svg',
   'Next.js': '/icons/nextjs.svg',
   'Node.js': '/icons/nodejs.svg',
