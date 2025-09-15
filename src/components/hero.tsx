@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { AnimatedText, AnimatedCharacters } from './animated-text';
 
 const heroTitle = ['Turning Vision Into', 'Reality With Code', 'And Design.'];
-const heroSubtext = "As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in Django, Node.js, Laravel, React.js and web development.";
+const heroSubtext = "As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects, showcasing my expertise in Django, Node.js, Laravel, React.js and web development.";
 
 export function Hero() {
   const buttonVariants = {

@@ -36,11 +36,3 @@ export type Certificate = {
   url: string;
   skills: string[];
 };
-
-export type Article = {
-  id: string;
-  title: string;
-  date: string;
-  description: string;
-  slug: string;
-};

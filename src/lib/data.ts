@@ -1,5 +1,5 @@
 
-import type { Project, Experience, Article, Education, Certificate } from './types';
+import type { Project, Experience, Education, Certificate } from './types';
 import { placeholderImages } from './placeholder-images.json';
 
 export const author = {
@@ -244,27 +244,3 @@ export const certificates: Certificate[] = [
       skills: ['Bash', 'PostgreSQL', 'Git'],
     },
   ];
-
-export const articles: Article[] = [
-  {
-    id: 'article1',
-    title: 'Mastering State Management in React',
-    date: '2023-10-15',
-    description: 'A deep dive into different state management libraries and patterns in the React ecosystem.',
-    slug: 'mastering-state-management-in-react',
-  },
-  {
-    id: 'article2',
-    title: 'Building a REST API with Django Rest Framework',
-    date: '2023-08-22',
-    description: 'A step-by-step guide to creating a powerful and secure REST API using Python and Django.',
-    slug: 'building-api-with-django',
-  },
-  {
-    id: 'article3',
-    title: 'The Art of Web Animations with Framer Motion',
-    date: '2023-05-30',
-    description: 'Exploring how to create fluid and engaging user interfaces with Framer Motion in a Next.js application.',
-    slug: 'web-animations-framer-motion',
-  },
-];
