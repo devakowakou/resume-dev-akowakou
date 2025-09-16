@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Eye, Github } from 'lucide-react';
 import type { Project } from '@/lib/types';
 import { cn } from '@/lib/utils';
@@ -18,48 +18,12 @@ import {
 } from '@/components/ui/dialog';
 
 export function ProjectCard({ project }: { project: Project }) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const mouseX = useSpring(x, { stiffness: 300, damping: 30 });
-  const mouseY = useSpring(y, { stiffness: 300, damping: 30 });
-
-  const rotateX = useTransform(mouseY, [-0.5, 0.5], ['10deg', '-10deg']);
-  const rotateY = useTransform(mouseX, [-0.5, 0.5], ['-10deg', '10deg']);
-
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-    x.set(xPct);
-    y.set(yPct);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
   return (
     <motion.div
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: 'preserve-3d',
-      }}
+      whileHover={{ y: -5 }}
       className="relative h-full w-full"
     >
       <div
-        style={{
-          transform: 'translateZ(75px)',
-          transformStyle: 'preserve-3d',
-        }}
         className="group relative flex h-full flex-col overflow-hidden rounded-lg border bg-card shadow-lg"
       >
         <div className="relative h-48 w-full overflow-hidden">
