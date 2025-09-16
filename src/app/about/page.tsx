@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Metadata } from 'next';
 import { about } from '@/lib/data';
@@ -75,7 +76,7 @@ export default function AboutPage() {
                 <Card className="bg-card/50">
                   <CardContent className="p-6">
                     <TooltipProvider>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
+                      <div className="grid grid-cols-[repeat(auto-fill,minmax(6rem,1fr))] gap-4">
                         {(skills as string[]).map((skill, skillIndex) => (
                           <Tooltip key={skill}>
                             <TooltipTrigger>
