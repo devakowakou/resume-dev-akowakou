@@ -44,7 +44,7 @@ export function CertificatesTimeline() {
                 <div className="flex flex-wrap gap-2">
                   {cert.skills.map((skill) => (
                     <Badge key={skill} variant="secondary" className="flex items-center gap-1.5">
-                       {skillIcons[skill] && (
+                       {skillIcons[skill] ? (
                           <Image
                               src={skillIcons[skill]}
                               alt={`${skill} icon`}
@@ -52,7 +52,7 @@ export function CertificatesTimeline() {
                               height={14}
                               className="h-3.5 w-3.5"
                             />
-                        )}
+                        ) : null}
                       <span>{skill}</span>
                     </Badge>
                   ))}
