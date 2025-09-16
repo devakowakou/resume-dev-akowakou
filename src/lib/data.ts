@@ -310,4 +310,3 @@ export const certificates: Certificate[] = [
       skills: ['Bash', 'PostgreSQL', 'Git'],
     },
   ];
-
