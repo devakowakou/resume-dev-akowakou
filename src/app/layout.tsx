@@ -67,10 +67,7 @@ export default function RootLayout({
       <head />
       <body
         suppressHydrationWarning={true}
-        className={cn(
-          'min-h-screen bg-background font-body antialiased',
-          'selection:bg-primary selection:text-primary-foreground'
-        )}
+        className="min-h-screen bg-background font-body antialiased selection:bg-primary selection:text-primary-foreground"
       >
         <Providers>
           <div className="relative flex min-h-dvh flex-col bg-background">
