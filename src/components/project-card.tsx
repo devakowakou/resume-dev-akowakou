@@ -69,7 +69,9 @@ export function ProjectCard({ project }: { project: Project }) {
               <DialogContent className="max-w-4xl p-0">
                 <DialogHeader className="p-4 pb-0">
                   <DialogTitle>{project.title}</DialogTitle>
-                  <DialogDescription>Live demo of the project.</DialogDescription>
+                  <DialogDescription>
+                    Live demo of the project.
+                  </DialogDescription>
                 </DialogHeader>
                 <div className="aspect-video w-full">
                   <iframe
