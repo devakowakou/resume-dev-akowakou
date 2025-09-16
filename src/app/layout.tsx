@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import { cn } from '@/lib/utils';
@@ -65,6 +66,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
       <head />
       <body
+        suppressHydrationWarning={true}
         className={cn(
           'min-h-screen bg-background font-body antialiased',
           'selection:bg-primary selection:text-primary-foreground'
