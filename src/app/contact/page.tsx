@@ -28,7 +28,8 @@ const contactMethods = [
   {
     icon: <MapPin className="h-6 w-6 text-primary" />,
     title: 'Location',
-    value: 'Worldwide (Remote)',
+    value: 'Cotonou, Akpakpa',
+    href: 'https://www.google.com/maps/search/?api=1&query=Cotonou+Akpakpa',
   },
 ];
 
