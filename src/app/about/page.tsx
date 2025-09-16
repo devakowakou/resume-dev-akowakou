@@ -32,7 +32,7 @@ export default function AboutPage() {
         </h1>
       </ScrollReveal>
 
-      <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+      <div className="mt-12 grid grid-cols-1 gap-y-12 lg:grid-cols-3 lg:gap-x-8">
         <div className="lg:col-span-2">
           <ScrollReveal delay={0.1}>
             <p className="text-xl text-muted-foreground">{about.intro}</p>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <p className="mt-6 text-base text-foreground/80">{about.bio}</p>
           </ScrollReveal>
         </div>
-        <ScrollReveal className="flex justify-center" delay={0.3}>
+        <ScrollReveal className="flex justify-center lg:order-first" delay={0.3}>
           <div className="relative h-64 w-64 lg:h-80 lg:w-80">
             <Image
               src={aboutImage.imageUrl}
@@ -57,14 +57,16 @@ export default function AboutPage() {
         </ScrollReveal>
       </div>
 
-      <ScrollReveal className="mt-20" delay={0.4}>
-        <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground text-center">
-          My Tech Stack
-        </h2>
-        <p className="mt-2 text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-          A collection of technologies I use to build modern, scalable, and
-          performant web applications.
-        </p>
+      <div className="mt-20">
+        <ScrollReveal delay={0.4}>
+          <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground text-center">
+            My Tech Stack
+          </h2>
+          <p className="mt-2 text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+            A collection of technologies I use to build modern, scalable, and
+            performant web applications.
+          </p>
+        </ScrollReveal>
 
         <div className="mt-12 space-y-12">
           {Object.entries(about.skills).map(
@@ -118,7 +120,7 @@ export default function AboutPage() {
             )
           )}
         </div>
-      </ScrollReveal>
+      </div>
     </div>
   );
 }
