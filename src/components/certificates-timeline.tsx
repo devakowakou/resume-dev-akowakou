@@ -2,8 +2,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Award, LinkIcon } from 'lucide-react';
 import { certificates } from '@/lib/data';
+import { skillIcons } from '@/lib/skills';
 import { ScrollReveal } from './scroll-reveal';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
@@ -41,8 +43,17 @@ export function CertificatesTimeline() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {cert.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary">
-                      {skill}
+                    <Badge key={skill} variant="secondary" className="flex items-center gap-1.5">
+                       {skillIcons[skill] && (
+                          <Image
+                              src={skillIcons[skill]}
+                              alt={`${skill} icon`}
+                              width={14}
+                              height={14}
+                              className="h-3.5 w-3.5"
+                            />
+                        )}
+                      <span>{skill}</span>
                     </Badge>
                   ))}
                 </div>
