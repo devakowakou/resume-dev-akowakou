@@ -282,7 +282,7 @@ export const certificates: Certificate[] = [
       title: 'Data Analyst in Python',
       issuer: 'FreeCodeCamp',
       date: '2023',
-      url: '#', // Placeholder URL
+      url: '#',
       skills: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
     },
     {
