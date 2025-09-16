@@ -22,6 +22,16 @@ const navLinks = [
 
 function ThemeToggle() {
   const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    // Render a placeholder or nothing on the server
+    return <div className="h-9 w-9" />;
+  }
 
   return (
     <Button
