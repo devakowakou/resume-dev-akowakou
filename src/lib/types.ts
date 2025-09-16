@@ -26,10 +26,11 @@ export type Education = {
   location: string;
   country: string;
   website?: string;
+  description: string | string[];
 };
 
 export type Certificate = {
-  id: string;
+  id:string;
   title: string;
   issuer: string;
   date: string;

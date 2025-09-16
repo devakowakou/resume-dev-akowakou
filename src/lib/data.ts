@@ -259,12 +259,21 @@ export const education: Education[] = [
   {
     id: 'edu1',
     school: 'ESGIS',
-    degree: 'Licence en Architecture des Logiciels',
+    degree: "Bachelor's Degree in Software Architecture",
     date: '2022 – 2025',
     location: 'Cotonou',
     country: 'Bénin',
     website: 'esgis.bj',
-  },
+    description: [
+      'Acquired strong foundations in software engineering, algorithms, and object-oriented programming.',
+      'Studied and applied software architecture patterns such as MVC, microservices, and event-driven design.',
+      'Designed and implemented web and mobile applications using modern frameworks and tools.',
+      'Worked with SQL and NoSQL databases to design, optimize, and manage complex data structures.',
+      'Learned DevOps practices including CI/CD pipelines, Docker, and cloud deployment strategies.',
+      'Gained experience in Agile project management, UML modeling, and technical documentation.',
+      'Developed skills to build scalable, secure, and maintainable software solutions.'
+    ],
+  }
 ];
 
 export const certificates: Certificate[] = [
@@ -301,3 +310,4 @@ export const certificates: Certificate[] = [
       skills: ['Bash', 'PostgreSQL', 'Git'],
     },
   ];
+
