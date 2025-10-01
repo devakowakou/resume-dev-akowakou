@@ -1,3 +1,4 @@
+
 import { EducationTimeline } from '@/components/education-timeline';
 import { Metadata } from 'next';
 import { ScrollReveal } from '@/components/scroll-reveal';

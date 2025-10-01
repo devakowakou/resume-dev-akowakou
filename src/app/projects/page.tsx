@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next';
 import { projects } from '@/lib/data';
 import { ProjectCard } from '@/components/project-card';
