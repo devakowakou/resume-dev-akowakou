@@ -1,6 +1,4 @@
 
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import { cn } from '@/lib/utils';
@@ -9,6 +7,8 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import '../globals.css';
+import {NextIntlClientProvider, useMessages} from 'next-intl';
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -59,14 +59,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function LocaleLayout({
+const locales = ['en', 'fr'];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+}
+
+
+export default function LocaleLayout({
   children,
   params: {locale}
 }: {
   children: React.ReactNode;
   params: {locale: string};
 }) {
-  const messages = await getMessages();
+  unstable_setRequestLocale(locale);
+  const messages = useMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
@@ -75,7 +83,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning={true}
         className="min-h-screen bg-background font-body antialiased selection:bg-primary selection:text-primary-foreground"
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <div className="relative flex min-h-dvh flex-col bg-background">
               <Header />
