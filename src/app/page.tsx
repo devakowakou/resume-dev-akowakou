@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -8,6 +9,13 @@ import { Button } from '@/components/ui/button';
 import { projects, about, author } from '@/lib/data';
 import { placeholderImages } from '@/lib/placeholder-images.json';
 
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'Amour Akowakou - Fullstack Developer specializing in Django, FastAPI, Node.js, Laravel, React/Next.js, and AI automation.',
+  alternates: {
+    canonical: '/',
+  },
+};
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
   const aboutImage = placeholderImages.find(img => img.id === 'about-me')!;
