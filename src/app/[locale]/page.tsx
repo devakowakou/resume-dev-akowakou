@@ -1,8 +1,4 @@
-<<<<<<< master
-import type { Metadata } from 'next';
-=======
 
->>>>>>> main
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -12,15 +8,10 @@ import { ScrollReveal } from '@/components/scroll-reveal';
 import { Button } from '@/components/ui/button';
 import { projects, about, author } from '@/lib/data';
 import { placeholderImages } from '@/lib/placeholder-images.json';
+import { useTranslations } from 'next-intl';
 
-export const metadata: Metadata = {
-  title: 'Home',
-  description: 'Amour Akowakou - Fullstack Developer specializing in Django, FastAPI, Node.js, Laravel, React/Next.js, and AI automation.',
-  alternates: {
-    canonical: '/',
-  },
-};
 export default function Home() {
+  const t = useTranslations('HomePage');
   const featuredProjects = projects.slice(0, 3);
   const aboutImage = placeholderImages.find(img => img.id === 'about-me')!;
 
@@ -44,20 +35,20 @@ export default function Home() {
                 />
                  <div className="absolute inset-0 rounded-full border-4 border-primary/50" />
                  <div className="absolute -bottom-4 -right-4 h-24 w-24 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm shadow-lg">
-                    Hire Me
+                    {t('hireMe')}
                  </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <h2 className="text-4xl font-headline font-bold tracking-tight text-foreground sm:text-5xl">
-                About Me
+                {t('aboutMe')}
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 {about.intro}
               </p>
               <Button asChild size="lg" className="mt-6 group">
                 <Link href="/about">
-                  Learn More
+                  {t('learnMore')}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
@@ -70,10 +61,10 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <h2 className="text-4xl font-headline font-bold tracking-tight text-foreground sm:text-5xl text-center">
-              Featured Projects
+              {t('featuredProjects')}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground text-center">
-              A selection of my work, from web applications to creative experiments.
+              {t('featuredProjectsSubtext')}
             </p>
           </ScrollReveal>
           
@@ -88,7 +79,7 @@ export default function Home() {
           <ScrollReveal className="mt-16 text-center">
             <Button asChild size="lg" variant="outline" className="group">
               <Link href="/projects">
-                View All Projects
+                {t('viewAllProjects')}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>

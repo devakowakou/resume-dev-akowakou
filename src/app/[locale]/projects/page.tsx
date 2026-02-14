@@ -1,4 +1,3 @@
-
 import { Metadata } from 'next';
 import { projects } from '@/lib/data';
 import { ProjectCard } from '@/components/project-card';
@@ -17,7 +16,7 @@ export default function ProjectsPage() {
           My Projects
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-          Here&apos;s a selection of my work. Feel free to explore and check out the live demos or source code.
+          Here's a selection of my work. Feel free to explore and check out the live demos or source code.
         </p>
       </ScrollReveal>
 

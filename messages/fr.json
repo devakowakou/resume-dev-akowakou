@@ -1,0 +1,61 @@
+
+{
+  "Header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "description": "Développeur fullstack transformant les visions en réalité avec du code et du design.",
+    "quickLinks": "Liens rapides",
+    "connect": "Connecter",
+    "downloadCv": "Télécharger le CV",
+    "rightsReserved": "Tous droits réservés."
+  },
+  "Hero": {
+    "title": "Transformer la vision en réalité avec du code et du design.",
+    "subtitle": "En tant que développeur full-stack qualifié, je me consacre à transformer les idées en applications web innovantes. Explorez mes derniers projets, mettant en valeur mon expertise en Django, Node.js, Laravel, React.js et développement web.",
+    "myProjects": "Mes projets",
+    "contactMe": "Contactez-moi"
+  },
+  "HomePage": {
+    "aboutMe": "À propos de moi",
+    "aboutIntro": "La passion alimente le but ! Bonjour, je suis Amour Akowakou, un développeur fullstack avec une profonde passion pour la création d'expériences numériques belles, fonctionnelles et centrées sur l'utilisateur. Je m'épanouis en transformant des problèmes complexes en solutions élégantes.",
+    "learnMore": "En savoir plus",
+    "hireMe": "Engagez-moi",
+    "featuredProjects": "Projets en vedette",
+    "featuredProjectsSubtext": "Une sélection de mon travail, des applications web aux expériences créatives.",
+    "viewAllProjects": "Voir tous les projets"
+  },
+  "AboutPage": {
+    "title": "La passion alimente le but",
+    "intro": "La passion alimente le but ! Bonjour, je suis Amour Akowakou, un développeur fullstack avec une profonde passion pour la création d'expériences numériques belles, fonctionnelles et centrées sur l'utilisateur. Je m'épanouis en transformant des problèmes complexes en solutions élégantes.",
+    "bio": "En tant que développeur full-stack qualifié, je me consacre à transformer les idées en applications web innovantes. Mon expertise couvre diverses technologies, notamment Django, Node.js, Laravel et React/Next.js. Je m'engage à apprendre continuellement et à appliquer mes compétences pour créer des logiciels percutants.",
+    "techStackTitle": "Ma pile technologique",
+    "techStackSubtext": "Une collection de technologies que j'utilise pour créer des applications web modernes, évolutives et performantes."
+  },
+  "ExperiencePage": {
+    "title": "Mon parcours",
+    "subtitle": "Une chronologie de mon parcours professionnel et éducatif.",
+    "workExperience": "Expérience professionnelle",
+    "educationAndTraining": "Éducation et formation",
+    "certifications": "Certifications"
+  },
+  "ProjectsPage": {
+    "title": "Mes projets",
+    "subtitle": "Voici une sélection de mon travail. N'hésitez pas à explorer et à consulter les démos en direct ou le code source."
+  },
+  "ContactPage": {
+    "title": "Construisons quelque chose de grand",
+    "subtitle": "Vous avez un projet en tête, une question ou vous voulez simplement vous connecter ? Je suis toujours ouvert à discuter de nouvelles opportunités et d'idées créatives.",
+    "formTitle": "Envoyez-moi un message",
+    "connectTitle": "Autres façons de se connecter"
+  },
+  "NotFound": {
+    "title": "Page non trouvée",
+    "description": "Désolé, nous n'avons pas pu trouver la page que vous recherchiez.",
+    "goBack": "Retourner à l'accueil"
+  }
+}

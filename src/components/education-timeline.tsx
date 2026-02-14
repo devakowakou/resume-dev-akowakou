@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { GraduationCap, LinkIcon } from 'lucide-react';
+import { GraduationCap, LinkIcon, List } from 'lucide-react';
 import { education } from '@/lib/data';
 import { ScrollReveal } from './scroll-reveal';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
@@ -40,7 +40,19 @@ export function EducationTimeline() {
                   </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-foreground/80">{edu.location}, {edu.country}</p>
+                <p className="text-sm text-foreground/80 mb-4">{edu.location}, {edu.country}</p>
+                {Array.isArray(edu.description) ? (
+                  <ul className="space-y-2">
+                    {edu.description.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
+                        <List className="h-4 w-4 mt-1 flex-shrink-0 text-primary/80" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-foreground/80">{edu.description}</p>
+                )}
               </CardContent>
             </Card>
           </div>

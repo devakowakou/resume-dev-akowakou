@@ -1,12 +1,15 @@
-
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Award, LinkIcon } from 'lucide-react';
 import { certificates } from '@/lib/data';
+import { skillIcons } from '@/lib/skills';
 import { ScrollReveal } from './scroll-reveal';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
+
+const isDataUri = (src: string) => src.startsWith('data:image');
 
 export function CertificatesTimeline() {
   return (
@@ -40,11 +43,31 @@ export function CertificatesTimeline() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {cert.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary">
-                      {skill}
-                    </Badge>
-                  ))}
+                  {cert.skills.map((skill) => {
+                    const iconSrc = skillIcons[skill];
+                    return (
+                      <Badge key={skill} variant="secondary" className="flex items-center gap-1.5">
+                        {iconSrc ? (
+                          isDataUri(iconSrc) ? (
+                            <img
+                              src={iconSrc}
+                              alt={`${skill} icon`}
+                              className="h-3.5 w-3.5"
+                            />
+                          ) : (
+                            <Image
+                              src={iconSrc}
+                              alt={`${skill} icon`}
+                              width={14}
+                              height={14}
+                              className="h-3.5 w-3.5"
+                            />
+                          )
+                        ) : null}
+                        <span>{skill}</span>
+                      </Badge>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>

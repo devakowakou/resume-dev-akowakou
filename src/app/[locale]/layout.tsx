@@ -6,7 +6,9 @@ import { Providers } from '@/components/providers';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
-import './globals.css';
+import '../globals.css';
+import {NextIntlClientProvider, useMessages} from 'next-intl';
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -57,26 +59,40 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+const locales = ['en', 'fr'];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+}
+
+
+export default function LocaleLayout({
   children,
+  params: {locale}
 }: {
   children: React.ReactNode;
+  params: {locale: string};
 }) {
+  unstable_setRequestLocale(locale);
+  const messages = useMessages();
+
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
+    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
       <head />
       <body
         suppressHydrationWarning={true}
         className="min-h-screen bg-background font-body antialiased selection:bg-primary selection:text-primary-foreground"
       >
-        <Providers>
-          <div className="relative flex min-h-dvh flex-col bg-background">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-          <Toaster />
-        </Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>
+            <div className="relative flex min-h-dvh flex-col bg-background">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+            <Toaster />
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

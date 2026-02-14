@@ -1,4 +1,3 @@
-
 'use server';
 
 import { z } from 'zod';
@@ -52,7 +51,7 @@ export async function submitContactForm(
   }
 
   try {
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: 'Portfolio Contact Form <onboarding@resend.dev>',
       to: [toEmail],
       subject: `New message from ${name} via your portfolio`,
