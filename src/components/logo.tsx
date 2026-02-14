@@ -37,7 +37,6 @@ export function Logo({ className }: { className?: string }) {
           strokeLinejoin="round"
           variants={iconVariants}
         />
-        <title>PortfolioVerse Logo</title>
       </motion.svg>
     </Link>
   );

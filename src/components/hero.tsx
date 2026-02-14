@@ -11,6 +11,7 @@ const heroSubtext =
   'As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects, showcasing my expertise in Django, Node.js, Laravel, React.js and web development.';
 
 export function Hero() {
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary to-background">
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>

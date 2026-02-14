@@ -7,8 +7,6 @@ interface AnimatedTextProps {
   text: string | string[];
   el?: keyof JSX.IntrinsicElements;
   className?: string;
-  once?: boolean;
-  repeatDelay?: number;
   animation?: {
     hidden: Variants['hidden'];
     visible: Variants['visible'];
@@ -20,8 +18,6 @@ export function AnimatedText({
   text,
   el: Wrapper = 'p',
   className,
-  once,
-  repeatDelay,
   staggerChildren = 0.1,
   animation = {
     hidden: {
@@ -66,15 +62,11 @@ export function AnimatedCharacters({
   text,
   el: Wrapper = 'p',
   className,
-  once,
-  repeatDelay,
   stagger = 0.03,
 }: {
   text: string;
   el?: keyof JSX.IntrinsicElements;
   className?: string;
-  once?: boolean;
-  repeatDelay?: number;
   stagger?: number;
 }) {
   const characters = text.split('');
