@@ -17,10 +17,6 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
-      - name: Setup ESLint
-        run: |
-          echo '{ "extends": "next/core-web-vitals" }' > .eslintrc.json
-          npm install --save-dev eslint eslint-config-next
       - name: Run linting
         run: npm run lint
 
