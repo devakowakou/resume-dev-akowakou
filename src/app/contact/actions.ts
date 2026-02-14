@@ -51,7 +51,7 @@ export async function submitContactForm(
   }
 
   try {
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'Portfolio Contact Form <onboarding@resend.dev>',
       to: [toEmail],
       subject: `New message from ${name} via your portfolio`,

@@ -10,17 +10,6 @@ const heroTitle = ['Turning Vision Into', 'Reality With Code', 'And Design.'];
 const heroSubtext = "As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects, showcasing my expertise in Django, Node.js, Laravel, React.js and web development.";
 
 export function Hero() {
-  const buttonVariants = {
-    initial: { scale: 1, boxShadow: '0 0 0 rgba(0, 0, 0, 0)' },
-    hover: {
-      scale: 1.05,
-      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-      transition: {
-        duration: 0.3,
-        yoyo: Infinity,
-      },
-    },
-  };
 
   return (
     <section className="relative overflow-hidden bg-background">
